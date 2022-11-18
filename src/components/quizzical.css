@@ -18,6 +18,9 @@
 .titleDown{margin:-30px 0px 20px 0px}
 .startQuiz{color:rgb(255, 255, 255);background-color:rgba(0, 110, 123);padding:10px 20px 10px 20px;border:none;border-radius:5px}
 .startQuiz:hover{background-color:rgb(0, 189, 210);cursor:pointer}
+.option{background-color:white;cursor:pointer}
+#wrongAnswer,#correctAnswer{border:2px solid rgba(0, 110, 123)}
+#correctAnswer{background-color:yellow}
 
 
 
