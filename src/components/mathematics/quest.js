@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState} from 'react'
 
- export default function Quest({scoreStatus,answerStyle,optionCorrect,option,style,key,question}){
+ export default function Quest({scoreStatus,answerStyle,optionCorrect,option,style,keyy,question}){
     const [shuffled, shuffle] = useState([])
    const [Option1, Answer1] = useState(false)
    const [Option2, Answer2] = useState(false)
@@ -65,8 +65,8 @@ import { useState} from 'react'
         optioned[optioned.indexOf(4)] = optionsArr[3]
 
     return (
-        <div className='quest' key={key}>
-        <div className='question'>{question}</div>
+        <div className='quest' key={keyy}>
+        <div className='question'>{keyy}{question}</div>
         <div className='options'>
         {optioned}
         </div>

@@ -1,5 +1,6 @@
 import Quizzical from './components/quizzical.js';
-import Questions from './components/questions.js';
+import Questions from './components/mathematics/questions.js';
+import Subjects from './components/subjects.js';
 import './App.css';
 import {Routes , Route} from 'react-router-dom'
 
@@ -8,6 +9,7 @@ function App() {
     <div  className="App">
       <Routes>
       <Route path="/React-Quizzical-App" element={<Quizzical />} />
+      <Route path="/subjects" element={<Subjects />} />
       <Route path="/questions" element={<Questions/>} />
       </Routes>
       </div>
