@@ -8,7 +8,7 @@ function App() {
   return (
     <div  className="App">
       <Routes>
-      <Route path="/React-Quizzical-App" element={<Quizzical />} />
+      <Route path="/" element={<Quizzical />} />
       <Route path="/subjects" element={<Subjects />} />
       <Route path="/questions" element={<Questions/>} />
       </Routes>
