@@ -14,7 +14,8 @@ function questionInfo(){
         React.useEffect(()=> fetchAPI(),[])
         const fetchAPI = async() => {
           const res = await fetch('https://opentdb.com/api.php?amount=10&category=19&difficulty=medium&type=multiple')
-          getQuestions(await res.json().results)
+          const dataa = await res.json().results
+          getQuestions((data)=>({...data, questionsState:dataa}))
           //getQuestions(await res.clone().json().results)
           //console.log((await res.json()).results)
         }

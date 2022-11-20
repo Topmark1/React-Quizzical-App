@@ -7,6 +7,8 @@ export default function Subjects(){
         <h1>
             Subjects
         </h1>
-    <Link to ='/questions'><button className='startQuiz1'>Mathematics</button></Link>   
+    <Link to ='/questions'>
+        <button className='startQuiz1'>Mathematics</button>
+    </Link>   
     </div>)
 }
