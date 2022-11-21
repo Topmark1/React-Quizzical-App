@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState} from 'react'
 import Quest from './quest.js'
-//import data from './data.js'
+import data from './data.js'
 
  export default function Questions(){
    const [questions, getQuestions] = useState(questionInfo())
@@ -9,16 +9,16 @@ import Quest from './quest.js'
  
 function questionInfo(){
   // replace data with []
- return {questionsState:[],submit:false,score:1}}
+ return {questionsState:data,submit:false,score:1}}
        
-        React.useEffect(()=> fetchAPI(),[])
-        const fetchAPI = async() => {
-          const res = await fetch('https://opentdb.com/api.php?amount=10&category=19&difficulty=medium&type=multiple')
-          const dataa = await res.json().results
-          getQuestions((data)=>({...data, questionsState:dataa}))
-          //getQuestions(await res.clone().json().results)
-          //console.log((await res.json()).results)
-        }
+        // React.useEffect(()=> {
+        //   async function fetchAPI(){
+        //   const response = await fetch('https://opentdb.com/api.php?amount=10&category=19&difficulty=medium&type=multiple')
+        //   console.log(response)
+        //   const dataa = await response.json().results
+        //   console.log(dataa)
+        //   getQuestions((data)=>({...data, questionsState:dataa}))};
+        // fetchAPI()},[])
         
         function addScore(childState){
           let que
