@@ -16,16 +16,17 @@
     margin:auto;
     margin-top:30px;padding:90px 0px 90px 0px;
     border:4px solid rgb(0, 88, 98)}
-    .startQuiz1{color:rgb(255, 255, 255);background-color:rgba(0, 110, 123);padding:10px 30% 10px 30%;border:none;border-radius:5px;cursor:pointer}
+    .startQuiz1{width:60%; transition:all 0.3s ease;margin-bottom:10px;color:rgb(255, 255, 255);background-color:rgba(0, 110, 123);padding:10px 0px 10px 0px;border:none;border-radius:5px;cursor:pointer}
+    .startQuiz1:hover{background-color:rgb(3, 162, 179);padding:13px 25% 13px 25%;}
 .homePageQ{color:rgba(0, 110, 123);background-color:rgb(167, 246, 255);border-radius:5px;width:70%;
     margin:auto;
     margin-top:30px;padding:90px 0px 90px 80px;
     border:4px solid rgb(0, 88, 98)}
-.questionPage{margin:-20px 90px 0px 0px;text-align:left;font-size:14px}
-.question{font-size:16px;margin-bottom:11px}
-.options{display:flex;gap:20px}
-.option{background-color:white;padding:3px 9px 3px 9px;cursor:pointer;border:2px solid rgba(0, 110, 123);border-radius:15px}
-hr{border-top:2px solid rgb(0, 189, 210);opacity:0.2}
+.questionPage{margin:-20px 90px 0px 0px;text-align:left;font-size:16px}
+.question{font-size:16px;margin-bottom:18px}
+.options{display:flex;gap:20px;flex-wrap:wrap}
+.option{background-color:white;padding:5px 10px 5px 10px;cursor:pointer;border:2px solid rgba(0, 110, 123);border-radius:15px}
+hr{margin-top:20px;border-top:2px solid rgb(0, 189, 210);opacity:0.2}
 #wrongAnswer,#correctAnswer{border:2px solid rgba(0, 110, 123)}
 #correctAnswer{background-color:rgb(0, 189, 210);}
 .submit,.playAgain{margin:15px 0px 15px 40%;font-size:17px;color:white;background-color:rgba(0, 110, 123);padding:5px 17px 5px 17px;cursor:pointer;border-radius:15px;border-color:none}
@@ -37,7 +38,7 @@ hr{border-top:2px solid rgb(0, 189, 210);opacity:0.2}
     margin:auto;
     margin-top:30px;padding:90px 30px 90px 30px;
     border:4px solid rgb(0, 88, 98)}
-    
+
     .questionPage{margin:-20px 0px 0px 0px}
     .submit,.playAgain{margin:15px 0px 15px 35%;font-size:17px;padding:5px 17px 5px 17px;border-radius:15px;}
     .circle4{float:right; margin:-25px -30px 0px 0px;width:25%}
@@ -56,12 +57,14 @@ hr{border-top:2px solid rgb(0, 189, 210);opacity:0.2}
         .IQlogo{width:50%;margin:0px 0px -20px 0px}
 .circle1{width:70px;margin:10px 0px 0px 0px;}
 
-.question{font-size:14px;margin-bottom:11px}
+
+.question{font-size:16px;margin-bottom:15px}
 .questionPage{margin:-55px 0px 0px 0px}
 .options{display:flex;gap:10px;flex-wrap:wrap}
-.option{font-size:12px;background-color:white;padding:2px 7px 2px 7px;border-radius:15px}
-.submit,.playAgain{margin:15px 0px 15px 25%;font-size:15px;padding:3px 14px 3px 14px;border-radius:13px;}
-.score{text-align:center;font-size:14px;margin-bottom:-40px}
+.option{font-size:16px;background-color:white;padding:4px 8px 4px 8px;border-radius:15px}
+hr{margin-top:15px;border-top:2px solid rgb(0, 189, 210);opacity:0.2}
+.submit,.playAgain{margin:15px 0px 15px 25%;font-size:17px;padding:3px 14px 3px 14px;border-radius:13px;}
+.score{text-align:center;font-size:16px;margin-bottom:-40px}
 .circle4{display:none}}
 
 
