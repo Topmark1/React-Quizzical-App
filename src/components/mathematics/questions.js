@@ -13,7 +13,7 @@ function questionInfo(){
  return {questionsState:[],submit:false,score:1}}
        
         React.useEffect(()=> {
-        axios.get('https://opentdb.com/api.php?amount=10&category=19&difficulty=medium&type=multiple')
+        axios.get('https://opentdb.com/api.php?amount=30&category=19&difficulty=medium&type=multiple')
             .then(res=>{getQuestions((data)=>({...data, questionsState:(res.data.results)}))
             })
             .catch(err=>{ console.log(err)
