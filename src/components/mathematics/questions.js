@@ -3,6 +3,7 @@ import { useState} from 'react'
 import Quest from './quest.js'
 //import data from './data.js'
 import axios from 'axios'
+import he from 'he'
 
  export default function Questions(){
    const [questions, getQuestions] = useState(questionInfo())
@@ -14,8 +15,7 @@ function questionInfo(){
        
         React.useEffect(()=> {
         axios.get('https://opentdb.com/api.php?amount=30&category=19&difficulty=medium&type=multiple')
-            .then(res=>{
-              getQuestions((data)=>({...data, questionsState:(res.data.results)}))
+            .then(res=>{getQuestions((data)=>({...data, questionsState:(res.data.results)}))
             })
             .catch(err=>{ console.log(err)
             })
@@ -44,9 +44,9 @@ function submitCommand(){
           <Quest  
           key = {((questions.questionsState).indexOf(data))+1}
           keyy={((questions.questionsState).indexOf(data))+1+'. '} 
-          question={data.question} 
+          question={he.decode(data.question)} 
           option={data.incorrect_answers} 
-          optionCorrect={data.correct_answer}
+          optionCorrect={he.decode(data.correct_answer)}
           style={questions.submit?{color:'red',backgroundColor:'rgb(255,200,200)'}:{backgroundColor:'rgb(0, 189, 210)'}}
           answerStyle={questions.submit?{color:'green',backgroundColor:'rgb(200,255,200)'}:{opacity:1}} 
           scoreStatus={addScore}

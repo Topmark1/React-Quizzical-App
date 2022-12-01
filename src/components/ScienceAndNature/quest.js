@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState} from 'react'
+import he from 'he'
 
  export default function Quest({scoreStatus,answerStyle,optionCorrect,option,style,keyy,question}){
     const [shuffled, shuffle] = useState([])
@@ -53,9 +54,9 @@ import { useState} from 'react'
              
         const optionsArr = [
         <div className='option' id={id1} onClick={SetAnswerState1} style={answerStyle}>{optionCorrect}</div>,
-        <div className='option' id={id2} onClick={SetAnswerState2} style={Option2?style:{backgroundColor:'white'}}>{(option)[0]}</div>,
-        <div className='option' id={id3} onClick={SetAnswerState3} style={Option3?style:{backgroundColor:'white'}}>{(option)[1]}</div>,
-        <div className='option' id={id4}  onClick={SetAnswerState4} style={Option4?style:{backgroundColor:'white'}}>{(option)[2]}</div>
+        <div className='option' id={id2} onClick={SetAnswerState2} style={Option2?style:{backgroundColor:'white'}}>{he.decode((option)[0])}</div>,
+        <div className='option' id={id3} onClick={SetAnswerState3} style={Option3?style:{backgroundColor:'white'}}>{he.decode((option)[1])}</div>,
+        <div className='option' id={id4} onClick={SetAnswerState4} style={Option4?style:{backgroundColor:'white'}}>{he.decode((option)[2])}</div>
         ]
         
         let optioned = [].concat(shuffled)

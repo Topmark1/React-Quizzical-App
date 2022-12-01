@@ -3,7 +3,7 @@ const data = [
         "category": "Science: Mathematics",
         "type": "multiple",
         "difficulty": "medium",
-        "question": "In the hexadecimal system, what number comes after 9?",
+        "question": "English is Significant in?",
         "correct_answer": "The Letter A",
         "incorrect_answers": [
             "10",
