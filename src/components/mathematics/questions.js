@@ -14,7 +14,8 @@ function questionInfo(){
        
         React.useEffect(()=> {
         axios.get('https://opentdb.com/api.php?amount=30&category=19&difficulty=medium&type=multiple')
-            .then(res=>{getQuestions((data)=>({...data, questionsState:(res.data.results)}))
+            .then(res=>{
+              getQuestions((data)=>({...data, questionsState:(res.data.results)}))
             })
             .catch(err=>{ console.log(err)
             })
