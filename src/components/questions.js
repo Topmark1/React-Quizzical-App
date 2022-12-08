@@ -5,16 +5,16 @@ import Quest from './quest.js'
 import axios from 'axios'
 import he from 'he'
 
- export default function Questions(){
+ export default function Questions(props){
    const [questions, getQuestions] = useState(questionInfo())
    const [staticAns, setStaticAns] =useState(0)
  
 function questionInfo(){
   // replace data with []
  return {questionsState:[],submit:false,score:1}}
-       
+ 
         React.useEffect(()=> {
-        axios.get('https://opentdb.com/api.php?amount=30&category=19&difficulty=medium&type=multiple')
+        axios.get(`https://opentdb.com/api.php?amount=${props.amount}&category=${props.category}&difficulty=${props.difficulty}&type=multiple`)
             .then(res=>{getQuestions((data)=>({...data, questionsState:(res.data.results)}))
             })
             .catch(err=>{ console.log(err)
@@ -57,7 +57,7 @@ function submitCommand(){
          <div className='score'>
           {questions.submit?'You scored '+staticAns+'/'+(questions.questionsState).length+ ' correct answers':null}
           </div>
-        <img className='circle4' alt='' src={require(`../circle1.png`)} />
+        <img className='circle4' alt='' src={require(`./circle1.png`)} />
         </div>
     </div>)
 }

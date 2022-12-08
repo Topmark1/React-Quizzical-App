@@ -1,28 +1,37 @@
 import Quizzical from './components/quizzical.js';
-import MathematicsQuestions from './components/mathematics/questions.js';
-import GeneralQuestions from './components/general-knowledge/questions.js';
-import ScienceAndNature from './components/ScienceAndNature/questions.js';
-import Geography from './components/Geography/questions.js';
-import EntertainmentBooks from './components/EntertainmentBooks/questions.js';
-import ScienceComputers from './components/ScienceComputers/questions.js';
-import Politics from './components/Politics/questions.js';
+import Questions from './components/questions.js';
 import Subjects from './components/subjects.js';
 import './App.css';
 import {Routes , Route} from 'react-router-dom'
 
 function App() {
+  
   return (
     <div  className="App">
       <Routes>
       <Route path="/" element={<Quizzical />} />
       <Route path="/subjects" element={<Subjects />} />
-      <Route path="/mathematicsQuestions" element={<MathematicsQuestions/>} />
-      <Route path="/GeneralQuestions" element={<GeneralQuestions/>} />
-      <Route path="/ScienceAndNature" element={<ScienceAndNature/>} />
-      <Route path="/Geography" element={<Geography/>} />
-      <Route path="/EntertainmentBooks" element={<EntertainmentBooks/>} />
-      <Route path="/ScienceComputers" element={<ScienceComputers/>} />
-      <Route path="/Politics" element={<Politics/>} />
+      <Route path="/mathematicsQuestions" 
+             element={<Questions amount='10' difficulty='medium' category='19' />} 
+        />
+      <Route path="/GeneralQuestions"     
+             element={<Questions amount='30' difficulty='medium' category='9' />} 
+        />
+      <Route path="/ScienceAndNature"     
+             element={<Questions amount='30' difficulty='medium' category='17' />} 
+        />
+      <Route path="/Geography"            
+             element={<Questions amount='30' difficulty='medium' category='22' />} 
+        />
+      <Route path="/EntertainmentBooks"   
+             element={<Questions amount='30' difficulty='medium' category='10' />} 
+        />
+      <Route path="/ScienceComputers"     
+             element={<Questions amount='30' difficulty='medium' category='18' />} 
+        />
+      <Route path="/Politics"             
+             element={<Questions amount='20' difficulty='medium' category='24' />} 
+        />
       </Routes>
       </div>
       );
